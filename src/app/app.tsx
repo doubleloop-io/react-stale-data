@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { delay } from "./helpers"
 
 const App: React.FC = () => {
     return (
@@ -15,14 +16,17 @@ export const Component: React.FC = () => {
 
     const onIncrementCounter = () => {
         setCount(count + offset)
-
-        // Did you expect to increment two times?
-        // Nope -> courtesy of batching
-        setCount(count + offset)
     }
 
     const onIncrementOffset = () => {
         setOffset(offset + 1)
+    }
+
+    const onIncrementDelayed = async () => {
+        // Press 'Increment counter' multiple times
+        // while you're waiting 5sec and see what happens
+        await delay(5000)
+        setCount(count + offset)
     }
 
     return (
@@ -32,6 +36,9 @@ export const Component: React.FC = () => {
             </button>
             <button onClick={onIncrementOffset}>
                 Increment Offset {offset}
+            </button>
+            <button onClick={onIncrementDelayed}>
+                Increment Delayed {count}
             </button>
         </div>
     )
