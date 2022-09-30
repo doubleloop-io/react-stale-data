@@ -15,6 +15,10 @@ export const Component: React.FC = () => {
 
     const onIncrementCounter = () => {
         setCount(count + offset)
+
+        // Did you expect to increment two times?
+        // Nope -> courtesy of batching
+        setCount(count + offset)
     }
 
     const onIncrementOffset = () => {
