@@ -36,6 +36,13 @@ export const Component: React.FC = () => {
                     <h3>Hello</h3>
                 </div>
             ),
+            onClose: () => {
+                // Here we close over onIncrementCounter which closes
+                // over setCount(...) which closes over count variable.
+                // When we call this function (after closeModal()) count
+                // might have changed
+                onIncrementCounter()
+            },
         })
     }
 
