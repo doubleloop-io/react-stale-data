@@ -9,7 +9,7 @@ npm start
 ```
 
 ## Steps
-- Counter with offset
+- Counter with offset. Everything's fine
 - Batching
 - Async increment
 - Open modal / close modal 
