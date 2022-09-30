@@ -15,3 +15,6 @@ npm start
 - Open modal / close modal 
 - Increment on close (onClose callback)
 - Content with self-close button
+
+--> Realize that passing closures around may not be the best
+design choice
