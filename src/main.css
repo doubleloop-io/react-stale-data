@@ -12,3 +12,11 @@ button {
     margin-right: 2rem;
     margin-bottom: 0.5rem;
 }
+
+.modal {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: #989898 solid 2px;
+    width: 10rem;
+}
+
